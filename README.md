@@ -8,8 +8,20 @@
 
 ### Example Code
 
-![code](https://github.com/PleahMaCaka/P-Logger/blob/master/img/code.png?raw=true)
+```ts
+import { Level, Logger } from "@pleahmacaka/logger"
+
+Logger.log(Level.INFO, "Believe in yourself.")
+Logger.warn("Seize the day.")
+Logger.critical("Life is a journey.")
+```
 
 ### Output logs
 
-![log](https://raw.githubusercontent.com/PleahMaCaka/P-Logger/master/img/log.png?raw=true)
+```
+[2023-5-2 18:14:27] :: [INFO] :: Believe in yourself.
+[2023-5-2 18:14:27] :: [WARN] :: Seize the day.
+[2023-5-2 18:14:27] :: [CRITICAL] :: Life is a journey.
+```
+
+The prefix is colored by level and the content is printed in white.

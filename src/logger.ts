@@ -66,24 +66,24 @@ export class Logger {
     }
 
     public static info(...content: any) {
-        return console.log(color.green, `${this.date()} [INFO] :: ${content}`, color.reset)
+        return console.log(color.green, `${this.date()} [INFO] ::`, color.white + content, color.reset)
     }
 
     public static warn(...content: any) {
-        return console.log(color.yellow, `${this.date()} [WARN] :: ${content}`, color.reset)
+        return console.log(color.yellow, `${this.date()} [WARN] ::`, color.white + content, color.reset)
     }
 
     public static error(...content: any) {
-        return console.log(color.red, `${this.date()} [ERROR] :: ${content}`, color.reset)
+        return console.log(color.red, `${this.date()} [ERROR] ::`, color.white + content, color.reset)
     }
 
     public static debug(...content: any) {
         if (!this.debugMode) return
-        return console.log(color.blue, `${this.date()} [DEBUG] :: ${content}`, color.reset)
+        return console.log(color.blue, `${this.date()} [DEBUG] ::`, color.white + content, color.reset)
     }
 
     public static critical(...content: any) {
-        return console.log(color.red + color.bold, `${this.date()} [CRITICAL] :: ${content}`, color.reset)
+        return console.log(color.red + color.bold, `${this.date()} [CRITICAL] ::`, color.white + content, color.reset)
     }
 
 }
