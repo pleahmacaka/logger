@@ -21,9 +21,7 @@ const color = {
 export class Logger {
 
     private static date(): string {
-        const date = new Date()
-        const covered = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
-        return `[${covered}] ::`
+        return `[${new Date().toLocaleString("sv")}] ::`
     }
 
     public static debugMode: boolean = true
