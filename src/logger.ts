@@ -44,19 +44,19 @@ export class Logger {
 
         switch (type) {
             case Level.INFO:
-                return Logger.info(content)
+                return Logger.info(...content)
 
             case Level.WARN:
-                return Logger.warn(content)
+                return Logger.warn(...content)
 
             case Level.ERROR:
-                return Logger.error(content)
+                return Logger.error(...content)
 
             case Level.DEBUG:
-                return Logger.debug(content)
+                return Logger.debug(...content)
 
             case Level.CRITICAL:
-                return Logger.critical(content)
+                return Logger.critical(...content)
 
             default:
                 throw new TypeError("The logger must be of one of the following types: INFO, WARN, ERROR, DEBUG, CRITICAL")
@@ -64,24 +64,24 @@ export class Logger {
     }
 
     public static info(...content: any) {
-        return console.log(color.green, `${this.date()} [INFO] ::`, color.white + content, color.reset)
+        return console.log(`${color.green}${this.date()} [INFO] ::${color.white}`, ...content, color.reset)
     }
 
     public static warn(...content: any) {
-        return console.log(color.yellow, `${this.date()} [WARN] ::`, color.white + content, color.reset)
+        return console.log(`${color.yellow}${this.date()} [WARN] ::${color.white}`, ...content, color.reset)
     }
 
     public static error(...content: any) {
-        return console.log(color.red, `${this.date()} [ERROR] ::`, color.white + content, color.reset)
+        return console.log(`${color.red}${this.date()} [ERROR] ::${color.white}`, ...content, color.reset)
     }
 
     public static debug(...content: any) {
         if (!this.debugMode) return
-        return console.log(color.blue, `${this.date()} [DEBUG] ::`, color.white + content, color.reset)
+        return console.log(`${color.blue}${this.date()} [DEBUG] ::${color.white}`, ...content, color.reset)
     }
 
     public static critical(...content: any) {
-        return console.log(color.red + color.bold, `${this.date()} [CRITICAL] ::`, color.white + content, color.reset)
+        return console.log(`${color.red + color.bold}${this.date()} [CRITICAL] ::${color.white}`, ...content, color.reset)
     }
 
 }
