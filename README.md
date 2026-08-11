@@ -3,8 +3,8 @@
 [NPM](https://www.npmjs.com/package/@pleahmacaka/logger)
 
 ### Installation
-`npm install @pleahmacaka/logger`  
-`yarn add @pleahmacaka/logger`
+`bun add @pleahmacaka/logger`  
+`npm install @pleahmacaka/logger`
 
 ### Example Code
 
